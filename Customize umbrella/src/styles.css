@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;700;800&display=swap');
+
+/* Importing  "Nunito Sans" font
+      font-family: 'Nunito Sans', sans-serif; */
+
+/* 
+0. Main section
+  1. Preview section(left-half)
+      1.1 Loader icon
+      1.2 Preview Image
+  2. Customization section (right-half)
+      2.1 Heading title
+      2.2 Colors Radio group
+      2.3 User guid texts
+      2.4 Uplaod logo section
+  3. Animations used in the app        
+*/
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+p {
+    margin: 8px;
+}
+/* 0. Main-section -start  */
+.page-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+/* 1. Preview section (left half)-start  */
+
+/* 1.1 Loader-start */
+#loading-icon-big{
+  display: none;
+  width: 5rem;
+  height: 5rem;
+  transition: display 1s ease-in-out;
+  animation: spin 2s linear infinite;
+}
+/*  Loader-end  */
+
+
+.preview-container {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+}
+/* 1.2 PreviewImage start  */
+.preview-div{
+
+  height: 100%;
+  width: 100%;
+}
+#preview-image {
+    width: 100%;
+    object-fit: contain;
+}
+#logo-img {
+   position: absolute;
+   top: 100%;
+  left: 50%;
+  right: 50%;
+  width: 6rem;
+  height: 2rem;
+  object-fit: contain;
+  transform: translateX(-50%);
+}
+/*  PreviewImage end  */
+
+/* Preview section (left half)- end  */
+
+/* 2. Customization section (right-half)-start */
+.customize-container {
+    width: 50%;
+    height: 100%;
+    margin: 5rem;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+/* 2.1 Heading title - start  */
+#custom-umbrella-title {
+    font-size: 3rem;
+    font-weight: 560;
+}
+/* Heading title - end  */
+
+/* 2.2 Colors Radio group - start */
+#color-radio-group {
+    margin: 2rem 0rem
+}
+
+.color-radio {
+   appearance: none;
+   height: 2rem;
+   width: 2rem;
+   border-radius: 100%;
+   cursor: pointer;
+
+}
+.color-radio:checked{
+    box-shadow:"1px #fffaec";
+}
+/* Colors Radio group - end */
+
+/* 2.3 User guid texts-start */
+#line1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+
+}
+
+#line2 {
+    font-size: 1rem;
+}
+
+#line3 {
+    font-size: .8rem;
+}
+/*User guid texts - end */
+
+/* 2.4 Uplaod logo section - start */
+  #upload-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    margin-top: 10px;
+    min-width: 376px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background-color .5s linear;
+    cursor: pointer;
+    
+  }
+
+  #upload-btn svg{
+    font-weight: bold;
+    width: 25px;
+  }
+  
+#upload-btn svg path{
+    fill: #fff;
+  }
+  
+  #upload-btn span {
+    text-align: center;
+    flex: 1;
+  }
+  #upload-icon{
+  transition: display 1s ease-in-out;
+  }  #loading-icon-small{
+    display: none;
+  width: 30px;
+  height: 30px;
+  color: white;  
+  transition: display 1s ease-in-out;
+  animation: spin 2s linear infinite;
+  }
+/* 2.4 Uplaod logo section - start */
+
+/* 3. Animations used in the app - start */
+  @keyframes spin {
+  0% { transform:  rotate(0deg); }
+  100% { transform:rotate(360deg); }
+}
+/* 3. Animations used in the app - end  */
+
+/* Main-section - end  */
